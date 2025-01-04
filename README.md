@@ -15,3 +15,6 @@ I followed below steps to run this app in docker container-
 3) Used the image generated in step 2 to run the container. docker run -p 8080:80 <-image_name->
 4) Play-With-Docker exposed the port for me and I was able to access the game on port 8080. http://ip172-18-0-3-ctsmn2iim2rg00a5ab4g-8080.direct.labs.play-with-docker.com/ 
 
+Static File Hosting: The index.html file (along with other assets like CSS or JS) is copied to /usr/share/nginx/html, the default location where Nginx serves files.
+
+CMD: The CMD ["nginx", "-g", "daemon off;"] ensures Nginx runs in the foreground, serving your index.html.
